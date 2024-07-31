@@ -1,4 +1,6 @@
 
+
+
 <html>
 	<head>
 		<title>Script de exemplo</title>
@@ -12,6 +14,7 @@
 </html>
 
 <?php
+
 
 echo 'Hello World';
 
