@@ -10,7 +10,7 @@ $idadePessoa = 25;
 $idade_pessoa = 25;
 $salario_pessoa = 1500;
 
-$mensagemPHP = 'Hello PHP!Minha idade é: ' . $idade . ' idade dois: ' . $Idade;
+$mensagemPHP = 'Hello PHP! Minha idade é: ' . $idade . ' idade dois: ' . $Idade;
 
 $body = '<html>
                 <head>
