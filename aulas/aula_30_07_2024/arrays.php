@@ -46,6 +46,7 @@ function getDadosApi(){
     $salarioFuncionario->salarioLiquido = 2300;
 
     return array($salario, $nome, $recebeuSalario, $salarioFuncionario);
+    // list     ($salario, $nome, $recebeuSalario, $salarioFuncionario) = getDadosApi();
 }
 
 echo '<hr>';
@@ -81,17 +82,10 @@ function getPessoaObjeto(){
     $oPessoa->codigo = 1;
     $oPessoa->nome = 'Adriano\'s Bar';
     $oPessoa->idade = 25;
-    
-
-    $oPessoaFisica = $oPessoa;
-    $oPessoaJuridica = $oPessoa;
 
     // Adicionando o objeto atual no array de dados
     $aListaPessoasFn[] = $oPessoa;
 
-    $oPessoaTeste = $oPessoa;
-    $oPessoaTeste->codigo = 10;
-    
     $oPessoa = new  stdClass();
     $oPessoa->codigo = 2;
     $oPessoa->nome = 'Cauê';
@@ -147,5 +141,3 @@ function inserindoDados(){
 
     return true;    
 }
-
-
