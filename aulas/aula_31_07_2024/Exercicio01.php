@@ -12,6 +12,7 @@ function getFrutas(){
 
 echo 'Percorrendo array de Frutas:';
 echo '<hr>';
+
 $aFrutas = getFrutas();
 foreach($aFrutas as $value){
     echo '<br>Valor: ' . $value;
