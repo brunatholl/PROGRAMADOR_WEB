@@ -19,7 +19,6 @@ $html .= '</li>';
  */
  
 function getPessoaObjeto(){
-    $aListaPessoasFn = array();
     
     $oPessoa = new  stdClass();
     $oPessoa->codigo = 1;
@@ -32,6 +31,7 @@ function getPessoaObjeto(){
     $oPessoa->telefone = 91140950;
     
     // Adicionando o objeto atual no array de dados
+    $aListaPessoasFn = array();
     $aListaPessoasFn[] = $oPessoa;
 
     return $aListaPessoasFn;

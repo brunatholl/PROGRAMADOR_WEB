@@ -14,6 +14,10 @@ $html .= 'Após isso, utilizando o comando "FOREACH" em PHP,
 percorra os dados e mostre na tela as informações de cada funcionario.<br>';
 */
 
+
+
+/* EM CONSTRUÇÃO */
+
 function getFuncionarioObjeto(){
     $aListaFuncionarioFn = array();
     
@@ -26,49 +30,62 @@ function getFuncionarioObjeto(){
     $oSalario->salarioLiquido = '2800.00';
     
     // Adicionando o objeto atual no array de dados
-    $aListaFuncionarioFn[] = $oPessoa;
+    $aListaFuncionarioFn[] = $oSalario;
 
-    $oPessoa = new  stdClass();
-    $oPessoa->codigo = 2;
-    $oPessoa->nome = 'Cauê';
-
-    // Adicionando o objeto atual no array de dados
-    $aListaFuncionarioFn[] = $oPessoa;
-
-    $oPessoa = new  stdClass();
-    $oPessoa->codigo = 3;
-    $oPessoa->nome = 'Bruna';
+    $oSalario = new  stdClass();
+    $oSalario->codigo = 2;
+    $oSalario->nome = 'Cauê';
+    $oSalario->funcao = 'Estagiario';
+    $oSalario->salarioBruto = '3000.00';
+    $oSalario->imposto = '200.00';
+    $oSalario->salarioLiquido = '2800.00';
+    
 
     // Adicionando o objeto atual no array de dados
-    $aListaFuncionarioFn[] = $oPessoa;
+    $aListaFuncionarioFn[] = $oSalario;
 
-    $oPessoa = new  stdClass();
-    $oPessoa->codigo = 4;
-    $oPessoa->nome = 'Romulo';
-
-    // Adicionando o objeto atual no array de dados
-    $aListaFuncionarioFn[] = $oPessoa;
-
-    $oPessoa = new  stdClass();
-    $oPessoa->codigo = 5;
-    $oPessoa->nome = 'Gelvazio';
+    $oSalario = new  stdClass();
+    $oSalario->codigo = 3;
+    $oSalario->nome = 'Bruna';
+    $oSalario->funcao = 'Desenvolvedor';
+    $oSalario->salarioBruto = '3000.00';
+    $oSalario->imposto = '200.00';
+    $oSalario->salarioLiquido = '2800.00';
 
     // Adicionando o objeto atual no array de dados
-    $aListaFuncionarioFn[] = $oPessoa;
+    $aListaFuncionarioFn[] = $oSalario;
+
+    $oSalario = new  stdClass();
+    $oSalario->codigo = 4;
+    $oSalario->nome = 'Romulo';
+    $oSalario->funcao = 'Engenheiro';
+    $oSalario->salarioBruto = '3000.00';
+    $oSalario->imposto = '200.00';
+    $oSalario->salarioLiquido = '2800.00';
+
+    // Adicionando o objeto atual no array de dados
+    $aListaFuncionarioFn[] = $oSalario;
+
+    $oSalario = new  stdClass();
+    $oSalario->codigo = 5;
+    $oSalario->nome = 'Gelvazio';
+    $oSalario->funcao = 'Gerente';
+    $oSalario->salarioBruto = '3000.00';
+    $oSalario->imposto = '200.00';
+    $oSalario->salarioLiquido = '2800.00';
+
+    // Adicionando o objeto atual no array de dados
+    $aListaFuncionarioFn[] = $oSalario;
     return $aListaFuncionarioFn;
 }
 
-
-function getDadosApi(){
-    $salario = 1500;
-    $nome = 'Romulo';
-    $recebeuSalario = false;
-
-    $salarioFuncionario = new stdClass();
-    $salarioFuncionario->salarioBruto = 2500;
-    $salarioFuncionario->inss = 200;
-    $salarioFuncionario->salarioLiquido = 2300;
-
-    return array($salario, $nome, $recebeuSalario, $salarioFuncionario);
-    // list     ($salario, $nome, $recebeuSalario, $salarioFuncionario) = getDadosApi();
+$aDadosFuncionario = getFuncionarioObjeto();
+foreach($aDadosFuncionario as $oSalario){  
+    echo '<br>Código: ' . $oSalario->codigo;
+    echo '<br>Nome: ' . $oSalario->nome;
+    echo '<br>Função: ' . $oSalario->funcao;
+    echo '<br>Salario Bruto: ' . $oSalario->salarioBruto;
+    echo '<br>Imposto: ' . $oSalario->imposto;
+    echo '<br>Salario Líquido: ' . $oSalario->salarioLiquido;
 }
+
