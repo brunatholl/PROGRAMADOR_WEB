@@ -1,0 +1,20 @@
+[
+    {
+        "codigo": "1",
+        "nome": "Bruna ",
+        "email": "bruna.tholl.ti@gmail.com",
+        "senha": "teste"
+    },
+    {
+        "codigo": "2",
+        "nome": "Tholl",
+        "email": "bruna.tholl@gmail.com",
+        "senha": "teste"
+    },
+    {
+        "codigo": "2",
+        "nome": "Tholl",
+        "email": "bruna.tholl@gmail.com",
+        "senha": "teste"
+    }
+]

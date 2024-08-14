@@ -1,4 +1,5 @@
 <?php
+
 // Caminho do arquivo JSON
 $arquivo_json = 'usuarios.json';
 
@@ -31,7 +32,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $usuarios[] = $usuario;
 
     //Converte o array para JSON e salva no arquivo
-    file_put_contents($arquivo_json, json_encode($usuarios, JSOM_PRETTY_PRINT));
+    file_put_contents($arquivo_json, json_encode($usuarios, JSON_PRETTY_PRINT));
+    // file_put_contents($arquivo_json, json_encode($usuarios, json_pretty_print));
 
     echo "Usuário adicionado com sucesso!";
 }  
