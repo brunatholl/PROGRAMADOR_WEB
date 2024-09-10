@@ -19,4 +19,4 @@ function Verifica($numero1, $numero2){
 
 echo 'Verificar se o primeiro número é maior, menor ou igual ao segundo: ';
 echo '<br>';
-echo Verifica('33', '30');
+echo Verifica('33', '33');
