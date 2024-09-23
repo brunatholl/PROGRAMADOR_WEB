@@ -26,7 +26,7 @@ class Query {
         return $aRetorno;
     }
 
-    public function query($sSql) {
+    private function query($sSql) {
         $rRetorno = @pg_query($this->conexao, $sSql);
         if ($rRetorno !== false) {
             return $rRetorno;
@@ -34,7 +34,15 @@ class Query {
         
         $mensagem = "SQL: $sSql <br>Erros:" . pg_last_error($this->conexao);
 
-        throw new Exception('Erro ao executar comando SQL' . $mensagem);
+        $mensagem_atual = 'Erro ao executar comando SQL.' . $mensagem;
+
+        echo ('<p style="color:red; font-size:25px">' . $mensagem_atual . '</p>');
+
+        throw new Exception($mensagem_atual);
+    }
+
+    public function executaQuery($sSql){
+        return $this->query($sSql);
     }
 
 }
