@@ -5,7 +5,5 @@ echo '<a href="ConsultaUsuario.php">Consulta Usuário</a>';
 echo '</br>';
 echo '<a href="ConsultaMenu.php">Consulta Menu</a>';
 echo '</br>';
-echo '<a href="sistema-com-orientacao-objeto/index.php">Sistema com Orientação Objeto</a>';
-echo '</br>';
 
 // echo '<a href="sistema-escolar-sem-bd/index.php">Sistema Escolar Sem Banco Dados</a>';
