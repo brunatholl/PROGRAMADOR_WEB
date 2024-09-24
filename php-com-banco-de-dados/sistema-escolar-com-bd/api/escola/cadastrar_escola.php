@@ -1,5 +1,5 @@
 <?php
-require_once("../core/utils.php");
+require_once("../core/Utils.php");
 processaDados("escola");
 
 // function alterar_escola(){

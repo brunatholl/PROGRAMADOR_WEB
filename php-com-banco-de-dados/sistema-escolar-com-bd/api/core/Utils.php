@@ -2,12 +2,13 @@
 // PROCESSAMENTO DA PAGINA
 // echo "<pre>" . print_r($_POST, true) . "</pre>";return true;
 // echo "<pre>" . print_r($_GET, true) . "</pre>";return true;
-
+require_once("QueryPadrao.php");
 
 function formataData($data){
     return implode('/', array_reverse(explode('-', $data)));
 
     echo 'DATA ATUAL: <br>' . $data;
+    
     // // // CHAMA A FUNCAO JAVASCRIPT
     // // echo "<script>
     // //         alert(converteData('2024-08-28'));

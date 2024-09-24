@@ -1,5 +1,5 @@
 <?php 
-require_once("conexao/Utils.php");
+require_once("Utils.php");
 class ConsultaPadrao {
 
     public function __construct(){
@@ -100,7 +100,7 @@ class ConsultaPadrao {
             // COLUNAS
             $aColunas = $this->getColunasBancoDados();
             foreach($aColunas as $coluna){
-                $consulta .= '   <td align="center">' . $aDados[$coluna] . '</td>';
+                $consulta .= '   <td>' . $aDados[$coluna] . '</td>';
             }
 
             // FECHA A LINHA

@@ -1,9 +1,13 @@
 <?php 
-require_once("conexao/Utils.php");
-class ConsultaPadrao {
+require_once("Utils.php");
+class ConsultaPadraoCss {
 
     public function __construct(){
+        require_once("../core/header.php");
+        
         $this->processaDados();
+
+        require_once("../core/footer.php");
     }
 
     protected function processaDados(){
@@ -27,28 +31,7 @@ class ConsultaPadrao {
     }
 
     protected function getCabecalho(){
-        return '<!DOCTYPE html>
-                <html lang="pt-br">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Consulta de ' . $this->getTitulo() . '</title>
-                </head>
-                <style>
-                    h1 {
-                        text-align:center;
-                    }
-                    body {
-                        display:flex;
-                        width:98vw;
-                        justify-content:center;
-                        align-itens:center;
-                        flex-direction:column;
-                        margin-top:40px;
-                    }
-                </style>
-                <body>
-                    <h1>Consulta de ' . $this->getTitulo() . '</h1>
+        return '<h1>Consulta de ' . $this->getTitulo() . '</h1>
                     <table border="1">
                         <thead>';
     }
@@ -100,7 +83,7 @@ class ConsultaPadrao {
             // COLUNAS
             $aColunas = $this->getColunasBancoDados();
             foreach($aColunas as $coluna){
-                $consulta .= '   <td align="center">' . $aDados[$coluna] . '</td>';
+                $consulta .= '   <td>' . $aDados[$coluna] . '</td>';
             }
 
             // FECHA A LINHA
@@ -109,9 +92,7 @@ class ConsultaPadrao {
 
         $consulta .= '            
                 </tbody>
-            </table>
-        </body>
-        </html>';
+            </table>';
 
         return $consulta;
     }

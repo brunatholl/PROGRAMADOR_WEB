@@ -1,5 +1,4 @@
 <?php
-
 require_once("ConsultaPadrao.php");
 class ConsultaSistema extends ConsultaPadrao {
 
@@ -29,18 +28,16 @@ class ConsultaSistema extends ConsultaPadrao {
         );
     }
 
-    // forma 01, usando SQL
+    // Forma 01, USANDO SQL
     protected function getSqlConsulta(){
         $sqlConsulta = " select siscodigo,
-        sisnome,
-        case when sisativo = 1 then 'ATIVO' else 'INATIVO' end sisativo
-        from " . $this->getTabela() . " order by " . $this->getColunaOrdenacao();
+                                sisnome,
+                                case when sisativo = 1 then 'ATIVO' else 'INATIVO' end sisativo
+                          from " . $this->getTabela() . " order by " . $this->getColunaOrdenacao();
         return $sqlConsulta;
     }
-    
-    
-    
-    // forma 02, padrão de código feito no menu
+
+    // Forma 02
     // protected function getDadosConsulta(){
     //     $aDados = parent::getDadosConsulta();
 
